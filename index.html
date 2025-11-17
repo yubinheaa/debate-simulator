@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 辩论模拟赛</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>AI 辩论模拟赛</h1>
+      <h3>题目：年轻人在职场情绪稳定是/不是一件好事</h3>
+    </header>
+
+    <main>
+      <h2 id="status">当前阶段：准备中</h2>
+
+      <div class="timer">
+        <p>正方剩余时间：<span id="positiveTime">17:00</span></p>
+        <p>反方剩余时间：<span id="negativeTime">17:00</span></p>
+      </div>
+
+      <div id="control">
+        <button id="startBtn">开始比赛</button>
+        <button id="pauseBtn">暂停</button>
+        <button id="resumeBtn">继续</button>
+        <button id="nextStep">下一阶段</button>
+      </div>
+
+      <section id="interaction">
+        <!-- 用户发言区 -->
+        <div id="user-panel">
+          <h3>用户发言区</h3>
+          <div class="btn-group">
+            <button id="recordBtn">开始录音</button>
+            <button id="stopBtn">结束录音</button>
+          </div>
+          <audio id="userAudio" controls></audio>
+          <p id="asrText">识别结果：<span></span></p>
+        </div>
+
+        <!-- AI 发言区 -->
+        <div id="ai-panel">
+          <h3>AI 发言区</h3>
+          <p id="aiOutput">等待发言...</p>
+          <audio id="aiAudio" controls style="display:none;"></audio>
+        </div>
+      </section>
+
+      <section id="setting">
+        <h3>API 设置</h3>
+        <p>手动输入你的阿里云百炼 API Key</p>
+        <input id="apiKey" placeholder="sk-..." />
+        <button id="saveKey">保存</button>
+        <p style="color: gray">仅保存在 sessionStorage，刷新后需重新输入。</p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
