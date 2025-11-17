@@ -32,18 +32,17 @@
 ---
 
 ## 四、运行步骤
+ 1. 安装 Node.js
 
-1. 安装 Node.js
+ 2.克隆项目
+ git clone https://github.com/yubinheaa/debate-simulator.git
 
-2.克隆项目
-git clone https://github.com/yubinheaa/debate-simulator.git
+ cd debate-simulator
 
-cd debate-simulator
+ 3.启动本地服务器
+ npx serve
 
-3.启动本地服务器
-npx serve
-
-4. 执行命令后，终端会显示本地访问地址，复制地址在浏览器中访问即可运行项目。
+ 4. 执行命令后，终端会显示本地访问地址，复制地址在浏览器中访问即可运行项目。
 
 ---
 
